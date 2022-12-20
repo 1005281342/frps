@@ -22,4 +22,6 @@ RUN if [ "$(uname -m)" = "x86_64" ]; then export PLATFORM=amd64 ; else if [ "$(u
 #VOLUME /frp
 COPY frps.ini /frp/frps.ini
 
+EXPOSE 7000
+
 CMD /frp/frps -c /frp/frps.ini
